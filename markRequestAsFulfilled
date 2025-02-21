@@ -1,0 +1,23 @@
+<?php
+require 'db.php';
+
+header('Content-Type: application/json');
+
+$data = json_decode(file_get_contents('php://input'), true);
+
+if (isset($data['request_id'])) {
+    try {
+        $stmt = $pdo->prepare("
+            UPDATE BloodRequests 
+            SET status = 'Fulfilled', fulfilled_date = NOW() 
+            WHERE id = :request_id
+        ");
+        $stmt->execute([':request_id' => $data['request_id']]);
+        echo json_encode(['message' => 'Request marked as fulfilled']);
+    } catch (PDOException $e) {
+        echo json_encode(['error' => $e->getMessage()]);
+    }
+} else {
+    echo json_encode(['error' => 'Invalid input']);
+}
+?>

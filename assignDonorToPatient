@@ -1,0 +1,35 @@
+<?php
+require 'db.php';
+
+header('Content-Type: application/json');
+
+$data = json_decode(file_get_contents('php://input'), true);
+
+if (isset($data['patient_id'], $data['donor_id'])) {
+    try {
+        $pdo->beginTransaction();
+
+        // Insert Blood Request
+        $stmt = $pdo->prepare("
+            INSERT INTO BloodRequests (patient_id, donor_id, request_date, status) 
+            VALUES (:patient_id, :donor_id, NOW(), 'In Progress')
+        ");
+        $stmt->execute([
+            ':patient_id' => $data['patient_id'],
+            ':donor_id' => $data['donor_id']
+        ]);
+
+        // Update Donor Availability
+        $stmt = $pdo->prepare("UPDATE Donors SET availability = 'Unavailable' WHERE id = :donor_id");
+        $stmt->execute([':donor_id' => $data['donor_id']]);
+
+        $pdo->commit();
+        echo json_encode(['message' => 'Donor assigned successfully']);
+    } catch (PDOException $e) {
+        $pdo->rollBack();
+        echo json_encode(['error' => $e->getMessage()]);
+    }
+} else {
+    echo json_encode(['error' => 'Invalid input']);
+}
+?>
