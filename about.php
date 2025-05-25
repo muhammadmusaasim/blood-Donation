@@ -16,7 +16,7 @@
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F5F5F5;">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">Thalassemia Manager</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,17 +30,21 @@
                 <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                 <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
             </ul>
+                       <!-- Login Button -->
             <div class="d-flex">
-                <a href="login.php" class="btn btn-light btn-sm">Login</a>
+              <form action="login.php" method="post">
+              <!-- Your input fields go here -->
+              <button type="submit" class="btn btn-login">Login</button>
+            </form>
             </div>
         </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero-section text-center bg-primary text-white py-5">
-    <h1>About Thalassemia Manager</h1>
-    <p>Empowering Lives Through Blood Donation</p>
+  <section class="hero1-section text-center bg-primary text-white py-5">
+  <!-- <h1>About Thalassemia Manager</h1>
+    <p>Empowering Lives Through Blood Donation</p>-->
 </section>
 
 <!-- About Content -->
@@ -51,13 +55,13 @@
             <p>We are committed to helping thalassemia patients by providing a streamlined platform to connect them with willing blood donors. Our goal is to make blood donation more efficient and accessible.</p>
         </div>
         <div class="col-md-6">
-            <img src="uploads/about-mission.jpg" class="img-fluid rounded shadow" alt="Our Mission">
+           <!-- <img src="uploads/about-mission.jpg" class="img-fluid rounded shadow" alt="Our Mission">-->
         </div>
     </div>
 
     <div class="row mt-5">
         <div class="col-md-6">
-            <img src="uploads/about-howitworks.jpg" class="img-fluid rounded shadow" alt="How It Works">
+           <!-- <img src="uploads/about-howitworks.jpg" class="img-fluid rounded shadow" alt="How It Works">-->
         </div>
         <div class="col-md-6">
             <h2>How It Works</h2>

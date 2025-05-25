@@ -55,7 +55,7 @@ $donors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F5F5F5;">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">Thalassemia Manager</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

@@ -29,7 +29,8 @@
                     <option value="ngo">NGO</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-danger">Login</button>
+
         </form>
     </div>
 </body>

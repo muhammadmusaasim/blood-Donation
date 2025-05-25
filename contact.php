@@ -16,7 +16,7 @@
 </head>
 <body>
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F5F5F5;">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">Thalassemia Manager</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -41,9 +41,9 @@
         <div class="col-md-6 mb-4">
             <div class="contact-info">
                 <h4>Our Contact Details</h4>
-                <p><strong>Address:</strong> 123 Fake Street, Example City, Country</p>
+                <p><strong>Address:</strong> Villa 93  Amaranta 1  Villanova Dubai UAE</p>
                 <p><strong>Email:</strong> contact@thalassemiamanager.com</p>
-                <p><strong>Phone:</strong> +1 234 567 890</p>
+                <p><strong>Phone:</strong> +971 523698056</p>
                 <p><strong>Working Hours:</strong> Mon-Fri, 9:00 AM - 6:00 PM</p>
             </div>
         </div>
